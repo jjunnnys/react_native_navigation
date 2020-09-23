@@ -16,23 +16,24 @@ import LogoTile from './src/Logo';
 import HomeDrawer from './src/HomeDrawer';
 import UserDrawer from './src/UserDrawer';
 import PictogramHome from './src/assets/pics/home_icon.png';
+import MyDrawer from './src/MyDrawer';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const CustomDrawerContent = (props) => {
-  return (
-    <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-      <DrawerItem
-        label="Help"
-        onPress={() => Linking.openURL('https://www.google.com')}
-        icon={() => <LogoTile />}
-      />
-      <DrawerItem label="Info" onPress={() => alert('Info Window')} />
-    </DrawerContentScrollView>
-  );
-};
+// const CustomDrawerContent = (props) => {
+//   return (
+//     <DrawerContentScrollView {...props}>
+//       <DrawerItemList {...props} />
+//       <DrawerItem
+//         label="Help"
+//         onPress={() => Linking.openURL('https://www.google.com')}
+//         icon={() => <LogoTile />}
+//       />
+//       <DrawerItem label="Info" onPress={() => alert('Info Window')} />
+//     </DrawerContentScrollView>
+//   );
+// };
 
 class App extends Component {
   render() {
@@ -51,7 +52,7 @@ class App extends Component {
             activeTintColor: 'red',
             activeBackgroundColor: 'skyblue',
           }}
-          drawerContent={(props) => <CustomDrawerContent {...props} />}>
+          drawerContent={(props) => <MyDrawer {...props} />}>
           <Drawer.Screen
             name="Home"
             component={HomeDrawer}
