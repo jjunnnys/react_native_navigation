@@ -22,7 +22,7 @@ class User extends Component {
     const userName = params?.userName;
     const userLastName = params?.userLastName;
 
-    this.haederStyle();
+    // this.haederStyle();
 
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
