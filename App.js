@@ -13,9 +13,11 @@ class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={Home} />
+          {/* home 루트 */}
           <Stack.Screen name="User" component={User} />
+          {/* user 루트 */}
         </Stack.Navigator>
       </NavigationContainer>
     );
