@@ -4,15 +4,16 @@ import {Button, Text, View} from 'react-native';
 class User extends Component {
   haederStyle = () => {
     this.props.navigation.setOptions({
-      title: 'Customizing',
-      headerStyle: {
-        backgroundColor: 'blue',
-      },
-      headerTintColor: 'yellow',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-        color: 'green',
-      },
+      //   title: 'Customizing',
+      //   headerStyle: {
+      //     backgroundColor: 'blue',
+      //   },
+      //   headerTintColor: 'yellow',
+      //   headerTitleStyle: {
+      //     fontWeight: 'bold',
+      //     color: 'green',
+      //   },
+      headerBackTitle: '뒤로가기',
     });
   };
 
@@ -22,7 +23,7 @@ class User extends Component {
     const userName = params?.userName;
     const userLastName = params?.userLastName;
 
-    // this.haederStyle();
+    this.haederStyle();
 
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
