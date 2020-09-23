@@ -16,6 +16,18 @@ class Home extends Component {
             }); // 스크린을 등록하면 props로 넘겨 받는다. (name값을 인자로 입력)
           }}
         />
+        <Button
+          title="Change the title"
+          onPress={() =>
+            this.props.navigation.setOptions({
+              title: 'Changed!!',
+              headerStyle: {
+                backgroundColor: 'pink',
+              },
+              headerTintColor: 'red',
+            })
+          }
+        />
       </View>
     );
   }

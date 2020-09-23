@@ -2,11 +2,27 @@ import React, {Component} from 'react';
 import {Button, Text, View} from 'react-native';
 
 class User extends Component {
+  haederStyle = () => {
+    this.props.navigation.setOptions({
+      title: 'Customizing',
+      headerStyle: {
+        backgroundColor: 'blue',
+      },
+      headerTintColor: 'yellow',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        color: 'green',
+      },
+    });
+  };
+
   render() {
     const {params} = this.props.route; // 이 스크린의 루트값을 할당
     const userIdx = params?.userIdx;
     const userName = params?.userName;
     const userLastName = params?.userLastName;
+
+    this.haederStyle();
 
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

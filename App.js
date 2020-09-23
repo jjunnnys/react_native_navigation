@@ -13,11 +13,32 @@ class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={Home} />
-          {/* home 루트 */}
-          <Stack.Screen name="User" component={User} />
-          {/* user 루트 */}
+        <Stack.Navigator initialRouteName="User">
+          <Stack.Screen
+            name="Home" // home 루트
+            component={Home}
+            options={{title: 'Home Screen'}}
+          />
+          <Stack.Screen
+            name="User" // user 루트
+            component={User}
+            initialParams={{
+              userIdx: 40,
+              userName: 'Minjun',
+              userLastName: 'Seo',
+            }}
+            // options={{
+            //   title: 'Changed!!',
+            //   headerStyle: {
+            //     backgroundColor: 'pink',
+            //   },
+            //   headerTintColor: 'red',
+            //   headerTitleStyle: {
+            //     fontWeight: 'bold',
+            //     color: 'purple',
+            //   },
+            // }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );
