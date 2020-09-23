@@ -15,6 +15,7 @@ class App extends Component {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="User" component={User} />
         </Stack.Navigator>
       </NavigationContainer>
     );
