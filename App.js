@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler'; // react navigation
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'; // 네비게이션 상태와 구조 관리
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -42,6 +42,14 @@ class App extends Component {
               title: 'Home Screen',
               // headerTitle: <this.logoTitle />,
               headerTitle: <LogoTile />,
+              headerBackTitleVisible: false,
+              headerRight: () => (
+                <Button
+                  title="Info"
+                  onPress={() => alert('I am Button')}
+                  color="red"
+                />
+              ),
             }}
           />
           <Stack.Screen

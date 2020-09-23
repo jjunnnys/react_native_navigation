@@ -13,7 +13,15 @@ class User extends Component {
       //     fontWeight: 'bold',
       //     color: 'green',
       //   },
-      headerBackTitle: '뒤로가기',
+      headerBackTitleVisible: false,
+
+      headerRight: () => (
+        <Button
+          title="Go Back"
+          onPress={() => this.props.navigation.navigate('Home')}
+          color="red"
+        />
+      ),
     });
   };
 
